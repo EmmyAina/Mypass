@@ -15,3 +15,13 @@ $ pip install -r requirements.txt
 # run the application
 $ python app.py
 ```
+
+Set up model on DB
+```
+$ python
+>>> from project_folder import create_app
+>>> app = create_app()
+>>> app.app_context().push()
+>>> from project_folder import db
+>>> db.create_all()
+```
